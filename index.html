@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/core/favicon.ico" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/animaciones.css" />
+	<link rel="stylesheet" href="css/estilos.css" />
+	
+	<title>Banagraritos</title>
+    <script src="js/jquery-2.2.1.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/cargador.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/funciones.js"></script>  
+    <script src="js/preloadjs-0.4.1.min.js"></script>
+</head>
+<body>
+
+<div id="precarga" class="centrar">&nbsp;</div>
+<div id="cargador">
+	<img class="pr-carga" src="img/core/loader.gif"/>
+	<p id="porcentaje"></p>
+</div>
+<div id="todo" style="overflow:hidden; width:1920px; height:1080px;">
+	<audio id="sonido"></audio>
+	<div id="btnAudioStage" onClick="audiar('btnAudioStage');" onMouseDown="estadoBotonAudioStages(3);"></div>
+    <div id="sliderNav">
+    	<div id="conteNav"></div>
+    </div>
+    <div id="stages" style="position:relative;" onMouseMove="coordenadas(event);">
+    	<div id="c1">&nbsp;</div>
+        <div class="vibracion"><div id="avion" class="avion">&nbsp;</div></div>
+		<div id="c2">&nbsp;</div>
+		<div id="c3">&nbsp;</div>
+        <!--<div id="c4">&nbsp;</div> -->
+        <div id="pollo" class="moverX"><div class="vibracionP pollo">&nbsp;</div></div>
+        
+        
+        
+        <!-- Escenario 0 -->
+		<div id="stage0" class="stage" data-title="Inicial">
+        	<div class="contenido">
+            	<div id="E0intro" class="intro elementosh" name="delay_1">
+                  <div class="contIntro">
+                	<div class="titIntro"></div>
+                    <h3>Casa de la Familia</h3>
+                    <h1>Banagraritos</h1>
+                    <h4>Haz clic en la flecha para comenzar...</h4>
+                  </div> 
+                </div>
+                <!--<div id="btn_intro" class="elementosh" name="delay_2" onClick="salto(1);">Comenzar</div>-->         	
+			</div>
+        </div> 
+        
+         
+        <!-- Escenario 1 -->
+        
+        
+		<div id="stage1" class="stage" style="transform: translate(1020px,-1080px);" data-title="Casa">
+			<div class="contenido">
+            	<div id="E1per1" class="elementosh" name="delay_2"><div class="imgIsabella"></div></div>
+				<div id="E1caj1" class="elementosh bocadillo1" name="delay_2">
+                	Mi  casa es la meta cumplida de mi familia, los invito a averiguar cómo lo logramos.
+				</div>
+            </div>
+
+            <div id="pollo" class="moverX1"><div class="vibracionP pollo2">&nbsp;</div></div>
+		</div>
+        
+        
+        
+        <!-- Escenario 2 -->
+		<div id="stage2" class="stage" style="transform: translate(2730px,-2160px);" data-title="Hogar">
+			<div class="contenido">
+				<div id="E2per1" class="elementosh" name="delay_1"><div class="imgFamilia"></div></div>
+                <a href="#e2f1">
+                    <div id="E2btnF1" class="btn_com btn_fancy elementosh alertaM" name="delay_1" onClick="audiar('stop'); ponerVisible('globo1'); ponerInvisible('globo2'); ponerInvisible('globo3'); ponerInvisible('globo4');">
+                            <div class="textbox">
+                                <p class="text">1<br/>
+                                    <p style="font-family:lobster; transform: rotate(-7deg); font-size:20px; margin-bottom:10px;">Aprende</p> 
+                                como alcanzar tus metas y cumplir tus sueños.
+                                </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#e2f2">
+                    <div id="E2btnF2" class="btn_img btn_fancy elementosh alertaM" name="delay_1" onClick="audiar('stop');">
+                            <div class="textbox" style="background-color:#ef7c00; line-height:1;">
+                                <p class="text">2<br/>
+                                    <p style="font-family:lobster; transform: rotate(-7deg); font-size:20px; margin-bottom:10px;">Conoce</p> 
+                                la historia del ahorro.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#e2f3">
+                    <div id="E2btnF3" class="btn_info btn_fancy elementosh alertaM" name="delay_1" onClick="audiar('stop');ponerVisible('texto_img1'); ponerInvisible('texto_img2'); ponerInvisible('texto_img3');">
+                        <div class="textbox" style="background-color:#a54794;">
+                            <p class="text">3<br/>
+                                <p style="font-family:lobster; transform: rotate(-7deg); font-size:20px; margin-bottom:10px;">Alcanza</p>
+                                tus metas y sueños.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#e2f4">
+                    <div id="E2btnF4" class="btn_aud btn_fancy elementosh alertaM" name="delay_1" onClick="audiar('stop');">
+                        <div class="textbox" style="background-color:#87b526;">
+                            <p class="text">4<br/>
+                                <p style="font-family:lobster; transform: rotate(-7deg); font-size:20px; margin-bottom:10px;">Escucha</p> 
+                                como cumplir tus sueños.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#e2f5">
+                    <div id="E2btnF5" class="btn_vid btn_fancy elementosh alertaM" name="delay_1" onClick="audiar('stop');">
+                        <div class="textbox" style="">
+                            <p class="text">5<br/>
+                                <p style="font-family:lobster; transform: rotate(-7deg); font-size:20px; margin-bottom:10px;">Juega</p> 
+                                con Isabela el camino del ahorro.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+			</div>
+		</div>
+
+    </div>   
+</div>   
+<!--- Los fancybox -->
+	<div id="modals">
+    	<!--- Glosario -->
+        <div id="glosario" class="modal">
+			<div class="marcoFancy tam2Fancy">
+            	<div class="contenInfoFancy tam2Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                    <a href="#"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy">Glosario</div>
+                    <div class="teFa1">
+                    	
+                    </div>
+                </div>                    
+			</div>
+		</div>
+        <!--- Fuentes -->
+        <div id="fuentes" class="modal">
+			<div class="marcoFancy tam2Fancy">
+            	<div class="contenInfoFancy tam2Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                    <a href="#"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy">Fuentes</div>
+                    <div class="teFa1">
+                    	
+					</div>
+                </div>                    
+			</div>
+		</div>
+		<!--- Creditos -->
+        <div id="creditos" class="modal">
+			<div class="marcoFancy tam2Fancy">
+            	<div class="contenInfoFancy tam2Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                    <a href="#"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy">Créditos</div>
+                    <div class="teFa1">
+                    	
+                	</div>
+                </div>
+            </div>
+		</div>
+        <!--- copyright -->
+        <div id="copyright" class="modal">
+			<div class="marcoFancy tam2Fancy">
+            	<div class="contenInfoFancy tam2Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                    <a href="#"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy">Copyright</div>
+                    <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" target="_blank" title="Ver licencia completa">
+                    	<div class="imFa1"></div>
+                    </a>    
+                    <div class="teFa1">
+                    	
+                    </div>
+                </div>                    
+			</div>
+		</div>
+        <!--- mapa -->
+        <div id="mapa" class="modal">
+			<div class="marcoFancy tam2Fancy">
+            	<div class="contenInfoFancy tam2Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                    <a href="#"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy">Mapa de navegación</div>
+                    <div class="imFa1"></div>
+                </div>
+            </div>
+		</div>
+        <!-- Etapa 1 - F1 -->
+		<div id="e1f1" class="modal">
+			<div class="marcoFancy tam3Fancy">
+            	<div class="contenInfoFancy tam3Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                    <a href="#"><div class="btnCerrFancy"></div></a>
+            		<div class="tituloFancy">TAMAÑO 1</div>
+                    <div class="imFa1"></div>
+                    <div class="teFa1">
+                    	1. &nbsp;Donec tristique turpis nisi<br>
+                        1.1 Sed vulputate consequat lacinia.<br>
+                    	1.2 Lorem ipsum dolor sit amet<br>
+                    	1.3 Nunc nec nisi porta dolor finibus posuere.
+					</div>
+                </div>                    
+			</div>
+		</div>
+        <div id="e1f2" class="modal">
+			<div class="marcoFancy tam1Fancy">
+            	<div class="contenInfoFancy tam1Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                    <a href="#"><div class="btnCerrFancy"></div></a>
+            		<div class="tituloFancy">TAMAÑO 2</div>
+                    <div class="imFa1"></div>
+                    <div class="teFa1">
+                    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut lorem pellentesque, laoreet odio vel, varius lorem. Ut sodales orci sed mi rutrum, a finibus neque pretium. Aenean quis condimentum risus, ac mollis nunc. Aenean a ligula turpis. Donec tristique turpis nisi, sit amet luctus dui molestie eget. Cras in urna aliquam, egestas mi nec, convallis neque. Cras non ex fringilla, hendrerit est a, mollis metus. Cras nec sem ut velit pulvinar varius sit amet ac massa. Sed vulputate consequat lacinia. Sed commodo vitae velit sed tempor. Integer ut tincidunt enim, non dapibus ligula. Donec eu orci eleifend, varius tortor id, fermentum nulla. Duis tempor arcu vitae volutpat commodo. Nunc nec nisi porta dolor finibus posuere.
+					</div>
+                </div>                    
+			</div>
+		</div>
+        <!-- Etapa 2 - F1 -->
+		<div id="e2f1" class="modal">
+			<div class="marcoFancy tam1Fancy">
+            	<div class="contenInfoFancy tam1Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                    <a href="#"><div class="btnCerrFancy" onClick="audiar('stop');"></div></a>
+                    <div class="tituloFancy">1. Aprende</div>
+                    <div id="dialE2F1">
+                    	
+                        <!---->
+                    	<div id="globo1" class="bloqueGlobo1" style="display:none;">
+                        	<div id="f1" class="globoDial globoDialIzq aparece delay1000">
+                            	<div class="imFa1 papa"></div>
+                            	 Mija hoy culminamos la obra para reformar nuestra casa, ¿no le parece eso mucha maravilla?
+                            </div>
+                            <div id="f2" class="globoDial globoDialDer aparece delay5000">
+                            	<div class="imFa2 mama" ></div>
+                            	Por supuesto mijo, eso solo ha sido posible gracias al esfuerzo de todos en esta casa por cumplir nuestras metas y así alcanzar nuestros sueños.
+                            </div>
+                            <div class="audio" onClick="audiar('0')" style="top: 80px; left: 200px;"></div>
+                            <div class="paginadore">1/4</div>
+                            <div id="flechaAbaj" class="botDialDown botDial" onClick="ponerInvisible('globo1'); ponerVisible('globo2');"></div>                     		
+                        </div>
+                        <!---->
+                        <div id="globo2" class="bloqueGlobo1" style="display: none;">
+                        	<div id="f3" class="globoDial globoDialIzq aparece delay1000">
+                            	<div class="imFa1 hijo"></div>
+                            	Mi meta es comprarme una bicicleta. ¿Cómo podría cumplir mi sueño y lograr mi meta?
+                            </div>
+                            <div  id="f4"  class="globoDial globoDialDer aparece delay5000">
+                            	<div class="imFa2 mama" style="top:19px;"></div>
+                           		Para lograr las metas y cumplir sus sueños la mejor manera es guardando el dinero que tengas en forma de ahorro.
+                           	</div>
+                            <div class="audio" onClick="audiar('1')" style="top: 80px; left: 200px;"></div>
+                            <div class="paginadore">2/4</div>
+                            <div id="flechaArri" class="botDialUp botDial" onClick="ponerInvisible('globo2'); ponerVisible('globo1');"></div>
+                            <div id="flechaAbaj" class="botDialDown botDial" onClick="ponerInvisible('globo2'); ponerVisible('globo3');"></div>
+                        </div>
+                        <!---->
+                        <div id="globo3" class="bloqueGlobo1" style="display: none;">
+							<div  id="f5"  class="globoDial globoDialIzq aparece delay1000">
+                            	<div class="imFa1 hijo" style="top:-24px;"></div>
+                           		¿Cómo?
+                        	</div>
+                            <div  id="f6"  class="globoDial globoDialDer aparece delay2000">
+                            	<div class="imFa2 papa" style="top:-24px;"></div>
+                           		Muy fácil, ahorrando.
+                        	</div>
+                            <div class="audio" onClick="audiar('2')" style="top: 200px; left: 200px;"></div>
+                            <div class="paginadore">3/4</div>
+                            <div id="flechaArri" class="botDialUp botDial" onClick="ponerInvisible('globo3'); ponerVisible('globo2');"></div>
+                            <div id="flechaAbaj" class="botDialDown botDial" onClick="ponerInvisible('globo3'); ponerVisible('globo4');"></div>
+                        </div>
+                        <!---->
+                        <div id="globo4" class="bloqueGlobo1" style="display: none;">
+							<div  id="f7"  class="globoDial globoDialIzq aparece delay1000">
+                            	<div class="imFa1 hija"></div>
+                           		Andrés puedes utilizar la alcancía e ir depositando un dinero y así cumplir el sueño que tienes.
+                        	</div>
+                            <div class="audio" onClick="audiar('3')" style="top: 90px; left: 200px;"></div>
+                            <div class="paginadore">4/4</div>
+                            <div id="flechaArri" class="botDialUp botDial" onClick="ponerInvisible('globo4'); ponerVisible('globo3');"></div>
+                        </div>
+                        <!----> 
+                               
+                	</div>
+                    <div class="fondoFlechas"></div>
+                </div>                    
+			</div>
+		</div>
+        <!-- Etapa 2 - F2 -->
+		<div id="e2f2" class="modal">
+			<div class="marcoFancy tam1Fancy">
+            	<div class="contenInfoFancy tam1Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                    <a href="#" id="stop_video"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy">2. Conoce</div>
+                    <div class="teFa1">                    	
+                        <iframe id="popup_youtube" width="750" height="380" src="https://www.youtube.com/embed/bpe_48xIrDo" frameborder="0" allowfullscreen allowscriptaccess="always"></iframe>
+ 					</div>
+                </div>                    
+			</div>
+		</div>
+        <!-- Etapa 2 - F3 -->
+		<div id="e2f3" class="modal">
+			<div class="marcoFancy tam1Fancy">
+            	<div class="contenInfoFancy tam1Fancy_" style="">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy2.png"/>
+                    <a href="#"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy" style="top:-30px;">3. Alcanza tus metas</div>
+                    <div id="texto_img1" style="display:none;" class="textof3">
+                        <div class="vibracion"><div class="imFa1 desdeabajo delay1000"></div></div>
+                        <div class="teFa1 desdearriba delay500">
+                            Para alcanzar tus metas y sueños debes pensar:<br/><br/>
+                            <p><img src="img/chulo.png" width="30" height="25"/>¿Qué es lo quieres lograr?</p>
+                            <p><img src="img/chulo.png" width="30" height="25"/>¿Qué necesitas para hacerlo?</p>
+                            <p><img src="img/chulo.png" width="30" height="25"/>¿Cómo lo vas a lograr?</p>
+                        </div>
+                        <div class="paginadore" style="left: 660px; top: 392px;">1/3</div>                   
+                        <div id="flechaAbaj" class="botDialDown botDial" onClick="ponerInvisible('texto_img1'); ponerVisible('texto_img2');" style="left: 720px; top: 350px;"></div>
+                    </div>
+                    
+                    <div id="texto_img2" style="display:none;">
+                        <div class="vibracion"><div class="imFa2 desdeabajo delay1000"></div></div>
+                        <div class="teFa2 desdearriba delay500">
+                            <p><img src="img/chulo.png" width="30" height="25"/>Fijar metas cortas que aporten a tu
+gran sueño.</p>
+                            <p><img src="img/chulo.png" width="30" height="25"/>Cumplir las metas de manera disciplinada y una vez vas las cumplas,</p>
+                            <p><img src="img/chulo.png" width="30" height="25"/>ir fijándote unas nuevas.</p>
+                        </div>
+                        <div class="paginadore" style="left: 660px; top: 392px;">2/3</div>
+                        <div id="flechaArri" class="botDialUp botDial" onClick="ponerInvisible('texto_img2'); ponerVisible('texto_img1');" style="left:640px; top:350px;"></div>
+                        <div id="flechaAbaj" class="botDialDown botDial" onClick="ponerInvisible('texto_img2'); ponerVisible('texto_img3');" style="left: 720px; top: 350px;"></div>
+                    </div>
+                    
+                    <div id="texto_img3" style="display:none;">
+                        <div class="vibracion"><div class="imFa2 desdeabajo delay1000"></div></div>
+                        <div class="teFa3 desdearriba delay500">
+                            <p>Todos debemos soñar no importa la edad y persistir por cumplir lo que deseamos. 
+                            <br/>
+                            Ahora que aprendiste sobre la importancia de soñar y proponerte metas a corto, mediano y largo plazo te invitamos a divertirte con ella.</p>
+                        </div>
+                        <div class="paginadore" style="left: 660px; top: 392px;">3/3</div>
+                        <div id="flechaArri" class="botDialUp botDial" onClick="ponerInvisible('texto_img3'); ponerVisible('texto_img2');" style="left:640px; top:350px;"></div>
+                    </div>
+                    <div class="fondoFlechas"></div>
+                </div>                    
+			</div>
+		</div>
+        <!-- Etapa 2 - F4 -->
+        <div id="e2f4" class="modal">
+			<div class="marcoFancy tam3Fancy">
+            	<div class="contenInfoFancy tam3Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy3.png"/>
+                    <a href="#"><div class="btnCerrFancy" onClick="audiar('stop');"></div></a>
+                    <div class="tituloFancy">4. Escucha</div>
+                    <audio id="aud2_4" controls style=" top: 159px; left: 191px; position: absolute; width: 200px;"> 
+                   	<source src="audio/dialogo/3a.mp3">
+                    	<source src="audio/dialogo/3a.ogg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>                    
+			</div>
+		</div>
+        
+        <!-- Etapa 2 - F5 -->
+		<div id="e2f5" class="modal">
+			<div class="marcoFancy tam1Fancy">
+            	<div class="contenInfoFancy tam1Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy2.png"/>
+                    <a href="#"><div class="btnCerrFancy" onClick="audiar('stop');"></div></a>
+                    <div class="tituloFancy">5. Actividad</div>
+                    <div class="teFa1" id="esteA">
+                    	<p>Indícale a Isabella el camino del ahorro para cumplir su sueño y meta que es viajar
+y conocer el mar. Los sueños si se pueden cumplir, con disciplina y constancia los puedes lograr.</p>
+						<a class="botonAct" onClick="ponerVisible('esteA1'); ponerInvisible('esteA');">Inicio</a>
+                    </div>
+                    <div class="teFa1a" id="esteA1" style="display:none;">
+                    	<p>Juego referencia <br/>PRJUEGO001</p>
+                    </div>
+                </div>                    
+			</div>
+		</div>
+        <!--Actividad 1-->
+		<div id="e6f1" class="modal">
+			<div class="marcoFancy tam0Fancy">
+            	<div class="contenInfoFancy tam0Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                  	<a href="#"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy">Actividad</div>
+                    <div class="imFa1"></div>
+					<div class="teFa1">
+                    	<strong>INSTRUCCIONES:</strong>
+                    	<br><br>	
+                    	En esta actividad debe completar el algoritmo, después de ubicar y arrastrar las opciones en el lugar que corresponda, dando solución al enunciado planteado.
+                    	<br><br><br>
+                    	<strong>ENUNCIADO:</strong><br><br>
+                    	En una librería se requiere realizar el inventario de ciertos artículos, realice un algoritmo que permita conocer la cantidad de libros, cd y memorias existentes, se debe mostrar la cantidad total  de artículos inventariados, la cantidad y el porcentaje de  cada tipo de artículo disponible
+		            </div>
+					<a href="#actividad1"><div class="btn_1 btn_entrar" onClick="inicioact_1();">Entrar</div></a>
+                </div>             
+			</div>
+		</div>
+		<div id="actividad1" class="modal">
+			<link href="css/act1.css" rel="stylesheet"/>
+			<script src="js/act1.js"></script>
+			<div class="marcoFancy tamGFancy">
+            	<div class="contenInfoFancy tamGFancy_">
+                	<!--<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>-->
+                  	<a href="#"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy">Actividad</div>
+                    <div id="contenedor1"></div>
+                    <div id="textEscena">
+                    <p>
+                    Inicio<br>
+					carticulo,  libro,  memoria, cd, plibrp,  pcd,  pmemoria : variable tipo    real<br>
+					carticulo&lt;-0<br>
+     				libro&lt;-0<br>
+     				memoria&lt;-0<br>
+     				cd&lt;-0
+                    <br><br>
+     				Escribir  "Digite el tipo de artículo que desea ingresar al inventario asi : libro(1),  cd(2), memoria(3)"<br>
+     				Leer tarticulo</p>
+                    <p style="padding-left:200px;">entonces</p>
+                    <p class="sangria1">libro&lt;-libro +1</p>
+     				<br>
+     				<p class="sangria2">Si (tarticulo=2)  entonces</p>
+     				<br>	
+     				<p class="sangria3">Sino</p>
+     				<p class="sangria3">memoria&lt;-memoria+1</p>
+                    <br>
+     				<p>FinSi</p>
+     				<br>
+     				<p>Escribir "Desea ingresar otro artículo al inventario si(1)/no(2)"</p>
+     				<br>				
+     				<p>Hasta Que OP=2</p>	
+     				<p>plibro&lt;-(libro*100)/carticulo<br>
+     				pcd&lt;-(cd*100)/carticulo<br>
+     				pmemoria&lt;-<br>
+     				Escribir "La cantidad de articulos ingresados son: " carticulo<br>
+     				Escribir "La cantida de libros ingresado es: "<br>
+     				"El porcentaje de libro existente es : " <span style="word-spacing: 78px;">&nbsp; "%"</span><br>
+     				Escribir "La cantida de cd ingresados es: " cd</p>
+                    <p style="padding-left:160px;">"El porcentaje de cd existente es : " pcd "%"</p>
+     				<p>Escribir "La cantida de memorias ingresadas es: " memoria<br>
+     				Escribir "El porcentaje de memorias existente es : " pmemoria "%"<br>
+     				Fin</p>
+                    </div>
+				</div>             
+			</div>
+		</div>
+		<div id="respuesta1" class="modal">
+			<div class="marcoFancy tam0Fancy">
+            	<div class="contenInfoFancy tam0Fancy_">
+                	<img class="imgFondoFancy" src="img/fancy/fondo_fancy.png"/>
+                  	<a href="#"><div class="btnCerrFancy"></div></a>
+                    <div class="tituloFancy">Actividad</div>
+                    <div class="imFa1"></div>
+					<div id="retroalimentacion1" class="teFa1">
+		            </div>
+                </div>             
+			</div>
+		</div>
+        
+        
+        
+       
+    </div><!--cierra modals-->
+	<div>
+		<div class="cabeza">
+			<a id="logo" href="#"></a>
+			<!--<span id="title">Recolección de información cualitativa</span>
+			<a id="logo-sena" href="http://www.sena.edu.co/" target="_blank"></a>
+			<a id="btn-copyright" class="btn" href="#copyright"></a>
+			<a id="btn-creditos" class="btn" href="#creditos"></a>
+			<a id="btn-fuentes" class="btn" href="#fuentes"></a>
+			<a id="btn-glosario" class="btn" href="#glosario"></a>
+			<a id="btn-descargable" class="btn" href="pdf/descargable.pdf" target="_blank"></a>
+            <a id="btn-mapa" class="btn" href="#mapa"></a>-->
+		</div>
+	</div>
+    <header>
+    <div class="total">
+    	<span id="title">Casa de la Familia Banagraritos</span>
+        <a id="casa" class="btn" href="#"></a>
+        <a id="btn-mapa" class="btn" href="#mapa"></a>
+    </div>
+    </header>
+	<div id="NavBtns">
+        <div id="btn_izq" class="flechas" style="visibility:hidden" onClick="audiar('stop');"></div>
+        <div id="btn_der" class="flechas" onClick="audiar('stop');"></div>
+    </div>
+    
+  
+</body>
+</html>
